@@ -11,6 +11,8 @@ public class Menu : MonoBehaviour
     }
     public void StartMenu()
     {
+        FindObjectOfType<GameSession>().ResetGameSession();
+        FindObjectOfType<ScenePersist>().ForceDestroy();
         SceneManager.LoadScene(0);
     }
 }
